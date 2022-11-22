@@ -7,17 +7,29 @@
 从其它文件中加载
 关闭程序
 '''
-
+from threading import Thread
 from PyQt5 import QtGui
 from key.waiting import binds,reloads
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QFormLayout, QLabel,QPushButton,QHBoxLayout
+from PyQt5.QtWidgets import QApplication, QWidget, QFormLayout, QLabel,QPushButton,QHBoxLayout,QLineEdit
 from PyQt5.QtWidgets import QMessageBox
 from GlobalStates import MyGlobalStates
 import keyboard
 from recognition.recognition import recognizer
 from key.waiting import start_in_thread
 
+
+from PyQt5.QtCore import pyqtSignal,Qt
+
+class MyLineEdit(QLineEdit):
+    clicked = pyqtSignal()
+    def mouseReleaseEvent(self, QMouseEvent):
+        if QMouseEvent.button()==Qt.LeftButton:
+            self.clicked.emit()
+
+# self.ges_dict = {0: 'cool', 1: 'eight', 2: 'fist', 3: 'five',
+#                  4: 'four', 5: 'fuck', 6: 'nine', 7: 'one', 8: 'seven',
+#                  9: 'six', 10: 'three', 11: 'two'
 class Winform(QWidget):
     def __init__(self, parent=None):
         super(Winform, self).__init__(parent)
@@ -43,20 +55,74 @@ class Winform(QWidget):
         fromlayout.addRow(hlayout)
         self.click_btns=[]
         self.edits=[]
+        self.labels=[]
 
-        for k in binds.keys():
+        l1=QLabel('one')
+        l2=QLabel('two')
+        l3=QLabel('three')
+        l4=QLabel('four')
+        l5=QLabel('five')
+        l6=QLabel('six')
+        l7=QLabel('seven')
+        l8=QLabel('eight')
+        l9=QLabel('nine')
+        lfi=QLabel('fist')
+        lfu=QLabel('fuck')
+        lc=QLabel('cool')
+
+        self.labels.append(l1)
+        self.labels.append(l2)
+        self.labels.append(l3)
+        self.labels.append(l4)
+        self.labels.append(l5)
+        self.labels.append(l6)
+        self.labels.append(l7)
+        self.labels.append(l8)
+        self.labels.append(l9)
+        self.labels.append(lfi)
+        self.labels.append(lfu)
+        self.labels.append(lc)
+
+        _one=  MyLineEdit(binds['one'])
+        _two = MyLineEdit(binds['two'])
+        _three = MyLineEdit(binds['three'])
+        _four = MyLineEdit(binds['four'])
+        _five = MyLineEdit(binds['five'])
+        _six = MyLineEdit(binds['six'])
+        _seven= MyLineEdit(binds['seven'])
+        _eight = MyLineEdit(binds['eight'])
+        _nine= MyLineEdit(binds['nine'])
+        _fist = MyLineEdit(binds['fist'])
+        _fuck = MyLineEdit(binds['fuck'])
+        _cool = MyLineEdit(binds['cool'])
+
+        self.edits.append(_one)
+        self.edits.append(_two)
+        self.edits.append(_three)
+        self.edits.append(_four)
+        self.edits.append(_five)
+        self.edits.append(_six)
+        self.edits.append(_seven)
+        self.edits.append(_eight)
+        self.edits.append(_nine)
+        self.edits.append(_fist)
+        self.edits.append(_fuck)
+        self.edits.append(_cool)
+
+        # for e in self.edits:
+        #     e.setFocusProxy(Qt.NoFocus)
+
+        for i in range(len(binds.keys())):
             vlayout = QHBoxLayout()
-            labl = QLabel(k)
-            lineEdit =QPushButton(binds[k])
-            lineEdit.setMinimumWidth(30)
-            # lineEdit.setMaximumWidth(30)
-            btn=QPushButton('确定')
+
+            btn=QPushButton('修改')
 
             self.click_btns.append(btn)
-            self.edits.append(lineEdit)
+            # PATH = QLineEdit(self.edits[i])
+            # PATH.setFocusPolicy(Qt.NoFocus)  # 设置不可编辑
 
-            vlayout.addWidget(labl)
-            vlayout.addWidget(lineEdit)
+            vlayout.addWidget(self.labels[i])
+            vlayout.addWidget(self.edits[i])
             fromlayout.addRow(btn,vlayout)
 
         self.setLayout(fromlayout)
@@ -67,9 +133,34 @@ class Winform(QWidget):
         self.btn_start.clicked.connect(self.btn_start_callback)#这里差了一个回调函数
         self.btn_end.clicked.connect(self.btn_end_callback)
 
-        # for edit in self.edits:
-        #     edit.clicked.connect(lambda:self.show_edits_change(edit))
-
+        # for i in range(len(self.edits)):
+            # self.edits[i].clicked.connect(lambda: self.show_edits_change(i))
+            # eval(f"self.edits[{i}].clicked.connect(lambda :self.show_edits_change({i}))")
+        # self.edits[0].clicked.connect(lambda: self.show_edits_change(0))
+        # self.edits[1].clicked.connect(lambda: self.show_edits_change(1))
+        # self.edits[2].clicked.connect(lambda: self.show_edits_change(2))
+        # self.edits[3].clicked.connect(lambda: self.show_edits_change(3))
+        # self.edits[4].clicked.connect(lambda: self.show_edits_change(4))
+        # self.edits[5].clicked.connect(lambda: self.show_edits_change(5))
+        # self.edits[6].clicked.connect(lambda: self.show_edits_change(6))
+        # self.edits[7].clicked.connect(lambda: self.show_edits_change(7))
+        # self.edits[8].clicked.connect(lambda: self.show_edits_change(8))
+        # self.edits[9].clicked.connect(lambda: self.show_edits_change(9))
+        # self.edits[10].clicked.connect(lambda: self.show_edits_change(10))
+        # self.edits[11].clicked.connect(lambda: self.show_edits_change(11))
+        #
+        self.edits[0].textChanged.connect(lambda: self.show_edits_change(0))
+        self.edits[1].textChanged.connect(lambda: self.show_edits_change(1))
+        self.edits[2].textChanged.connect(lambda: self.show_edits_change(2))
+        self.edits[3].textChanged.connect(lambda: self.show_edits_change(3))
+        self.edits[4].textChanged.connect(lambda: self.show_edits_change(4))
+        self.edits[5].textChanged.connect(lambda: self.show_edits_change(5))
+        self.edits[6].textChanged.connect(lambda: self.show_edits_change(6))
+        self.edits[7].textChanged.connect(lambda: self.show_edits_change(7))
+        self.edits[8].textChanged.connect(lambda: self.show_edits_change(8))
+        self.edits[9].textChanged.connect(lambda: self.show_edits_change(9))
+        self.edits[10].textChanged.connect(lambda: self.show_edits_change(10))
+        self.edits[11].textChanged.connect(lambda: self.show_edits_change(11))
 
         for btn in self.click_btns:
             btn.clicked.connect(self.save_binds_and_reload)
@@ -88,14 +179,8 @@ class Winform(QWidget):
         self.state.setText('关闭')
         MyGlobalStates.__run__=False
 
-    def show_edits_change(self,edit:QPushButton):
-        k=keyboard.read_hotkey()
-        idx=self.edits.index(edit)
-        print(list(binds.keys())[idx])
-        # print(l[idx])
-        # binds[binds.keys()[idx]]=k
-        edit.setText(k)
-
+    def show_edits_change(self,idx):
+        binds[list(binds.keys())[idx]]=self.edits[idx].text()
 
     def save_binds_and_reload(self):
         with open('assets/bind.yml','w',encoding='utf-8') as f:

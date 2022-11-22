@@ -25,7 +25,8 @@ def waiting_to_press_and_release():
     while True:
         if MyGlobalStates.__run__:
             if recognizer.now_ges in binds.keys():
-                keyboard.press_and_release(binds[recognizer.now_ges])
+                if binds[recognizer.now_ges]!='nothing':
+                    keyboard.press_and_release(binds[recognizer.now_ges])
             time.sleep(0.2)
         else:
             break

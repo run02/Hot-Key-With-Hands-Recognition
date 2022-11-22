@@ -23,7 +23,10 @@ class My_indentify():
     def __init__(self):
         # self.ges_dict = np.load('assets/num_to_ss.npy', allow_pickle=True) #识别出来的手势是数字,需要用字典把序号转化成字符串,加载保存的对照表
         # self.ges_dict = self.ges_dict.tolist()
-        self.ges_dict = {0: 'cool', 1: 'eight', 2: 'fist', 3: 'five', 4: 'four', 5: 'fuck', 6: 'nine', 7: 'one', 8: 'seven', 9: 'six', 10: 'three', 11: 'two'}
+        self.ges_dict = {0: 'cool', 1: 'eight', 2: 'fist', 3: 'five',
+                         4: 'four', 5: 'fuck', 6: 'nine', 7: 'one', 8: 'seven',
+                         9: 'six', 10: 'three', 11: 'two'}
+
         print(self.ges_dict)
         self.my_model = keras.models.load_model('assets/my_train_12_gestures2')  # 加载训练好的tensorflow模型
         self.mp_drawing = mp.solutions.drawing_utils  # 创建一个绘图工具

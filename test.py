@@ -3,7 +3,7 @@ import time
 import keyboard
 
 
-# print(keyboard.read_hotkey())
+print(keyboard.read_hotkey())
 # keyboard.press('a+b+c')
 # import threading
 #
@@ -20,9 +20,9 @@ import keyboard
 # while  True:
 #     print(123)
 #     time.sleep(2)
-d={'one': 's', 'nine': 's', 'five': 'x', 'six': 'z', 'eight': 'w', 'three': 'space'}
-print(d.keys())
-print(d.keys())
-print()
-print(type(d.keys()))
-
+# d={'one': 's', 'nine': 's', 'five': 'x', 'six': 'z', 'eight': 'w', 'three': 'space'}
+# print(d.keys())
+# print(d.keys())
+# print()
+# print(type(d.keys()))
+#
