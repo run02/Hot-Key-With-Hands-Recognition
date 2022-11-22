@@ -37,15 +37,15 @@ class Winform(QWidget):
         self.set_callbacks()
 
     def set_UI(self):
-        self.setWindowTitle("手势识别快捷键APP_V1.0")
+        self.setWindowTitle("Hot-Key-With-Hands-Recognition-V0.1")
         # self.resize(400, 100)
         hlayout = QHBoxLayout()
         fromlayout = QFormLayout()
 
-        self.state_label = QLabel('当前状态')
-        self.state = QLabel(' 关闭')
-        self.btn_start = QPushButton('开启手势识别')
-        self.btn_end = QPushButton('关闭手势识别')
+        self.state_label = QLabel('Status')
+        self.state = QLabel(' OFF')
+        self.btn_start = QPushButton('Start')
+        self.btn_end = QPushButton('Close')
 
         hlayout.addWidget(self.state_label)
         hlayout.addWidget(self.state)
@@ -115,7 +115,7 @@ class Winform(QWidget):
         for i in range(len(binds.keys())):
             vlayout = QHBoxLayout()
 
-            btn=QPushButton('修改')
+            btn=QPushButton('Save')
 
             self.click_btns.append(btn)
             # PATH = QLineEdit(self.edits[i])
@@ -168,15 +168,15 @@ class Winform(QWidget):
     def btn_start_callback(self):
         if MyGlobalStates.__run__ == False:
             try:
-                self.state.setText('开启')
+                self.state.setText('On')
                 MyGlobalStates.__run__=True
                 recognizer.start_in_thread()
                 start_in_thread()
             except Exception as e:
-                QMessageBox.information(self, '异常', e, QMessageBox.Ok)
+                QMessageBox.information(self, 'Error', e, QMessageBox.Ok)
 
     def btn_end_callback(self):
-        self.state.setText('关闭')
+        self.state.setText('Close')
         MyGlobalStates.__run__=False
 
     def show_edits_change(self,idx):
@@ -184,13 +184,13 @@ class Winform(QWidget):
 
     def save_binds_and_reload(self):
         with open(resource_path('assets/bind.yml'),'w',encoding='utf-8') as f:
-            f.write("#所有能识别出来的手势: {0: 'cool', 1: 'eight', 2: 'fist', 3: 'five', 4: 'four', 5: 'fuck', 6: 'nine', 7: 'one', 8: 'seven', 9: 'six', 10: 'three', 11: 'two'}\n")
+            f.write("#ALL_Gesture: {0: 'cool', 1: 'eight', 2: 'fist', 3: 'five', 4: 'four', 5: 'fuck', 6: 'nine', 7: 'one', 8: 'seven', 9: 'six', 10: 'three', 11: 'two'}\n")
             #保存配置
             for k in binds.keys():
                 f.write(f"{k}: {binds[k]}\n")
             f.close()
         reloads()
-        QMessageBox.information(self, '修改按键', '按键绑定修改成功', QMessageBox.Ok)
+        QMessageBox.information(self, 'Saving Changes', 'Saved Successfully !', QMessageBox.Ok)
 
     def closeEvent(self, a0: QtGui.QCloseEvent) -> None:
         MyGlobalStates.__run__=False

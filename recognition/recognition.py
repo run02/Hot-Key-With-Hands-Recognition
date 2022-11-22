@@ -24,28 +24,28 @@ class My_indentify():
     def __init__(self):
         # self.ges_dict = np.load('assets/num_to_ss.npy', allow_pickle=True) #识别出来的手势是数字,需要用字典把序号转化成字符串,加载保存的对照表
         # self.ges_dict = self.ges_dict.tolist()
-        self.ges_dict = {0: 'cool', 1: 'eight', 2: 'fist', 3: 'five',
-                         4: 'four', 5: 'fuck', 6: 'nine', 7: 'one', 8: 'seven',
-                         9: 'six', 10: 'three', 11: 'two'}
+        self._ges_dict = {0: 'cool', 1: 'eight', 2: 'fist', 3: 'five',
+                          4: 'four', 5: 'fuck', 6: 'nine', 7: 'one', 8: 'seven',
+                          9: 'six', 10: 'three', 11: 'two'}
 
-        print(self.ges_dict)
-        self.my_model = load_model(resource_path('assets/my_train_12_gestures2')) # 加载训练好的tensorflow模型
-        self.mp_drawing = mp.solutions.drawing_utils  # 创建一个绘图工具
-        self.mp_drawing_styles = mp.solutions.drawing_styles  # 创建一个绘图样式
-        self.mp_hands = mp.solutions.hands  # 创建mediapipe框架读取特征点的初步工具，需要输入一个视频流，后通过自定义的tenslrflow神经网络获得手势预测值
-        self.hands = self.mp_hands.Hands(model_complexity=0, min_detection_confidence=0.8, min_tracking_confidence=0.8)
+        print(self._ges_dict)
+        self._my_model = load_model(resource_path('assets/my_train_12_gestures2')) # 加载训练好的tensorflow模型
+        self._mp_drawing = mp.solutions.drawing_utils  # 创建一个绘图工具
+        self._mp_drawing_styles = mp.solutions.drawing_styles  # 创建一个绘图样式
+        self._mp_hands = mp.solutions.hands  # 创建mediapipe框架读取特征点的初步工具，需要输入一个视频流，后通过自定义的tenslrflow神经网络获得手势预测值
+        self._hands = self._mp_hands.Hands(model_complexity=0, min_detection_confidence=0.8, min_tracking_confidence=0.8)
         self.now_ges = 'none' #用于共享出去,给其他程序获得手势的标志位
-        self.pre = []  # tensorflow模型预测输出为一个包含12个权值的list
+        self._pre = []  # tensorflow模型预测输出为一个包含12个权值的list
 
 
 
     def start_in_loop(self,show_img=True):
-        self.cap=cv2.VideoCapture(0)
+        self._cap=cv2.VideoCapture(0)
         while True:
             if MyGlobalStates.__run__ is True:
                 # time.sleep(0.05)
                 # 从摄像头读一帧画面
-                success, image = self.cap.read()
+                success, image = self._cap.read()
                 if success:
                     image = cv2.flip(image, 1)
                     # 将图片设置为不可写，提升性能
@@ -53,7 +53,7 @@ class My_indentify():
                     # 转换为RGB格式
                     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
                     # 调用mediapipe框架读取特征点，特征点为1个对象，保存在results中
-                    results = self.hands.process(image)
+                    results = self._hands.process(image)
                     # 打开图像可写的开关，将颜色由RGB转化成BGR,加速
                     image.flags.writeable = True
                     image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
@@ -71,25 +71,25 @@ class My_indentify():
                                 landmark21.append((x, y, z))
                             landmark21_ = np.array([landmark21])
                             # 输入神经网络进行预测，得到预测结果为每一种手势对应的概率
-                            pre = self.my_model.predict(landmark21_[:1])
+                            pre = self._my_model.predict(landmark21_[:1])
                             # 预测结果大于0.5认为结果可信，进入下一步判断，可更改该值获得更高或较低的可信度
                             if np.max(pre) > 0.5:
                                 # 得到预测结概率最大的手势的编号
                                 ges_pre_p = np.argmax(pre)
                                 # 将手势编号通过字典转化为我们给他起名的字符串
-                                self.now_ges = self.ges_dict[ges_pre_p]
+                                self.now_ges = self._ges_dict[ges_pre_p]
                         # 显示我们预测的手势与概率
                         if show_img:
                             cv2.putText(image, str(np.max(pre)), (100, 200), 0, 1.3, (0, 0, 255), 3)
                             cv2.putText(image, self.now_ges, (0, 100), 0, 1.3, (0, 0, 255), 3)
                             # 将手部的特征点连线显示
                             for hand_landmarks in results.multi_hand_landmarks:
-                                self.mp_drawing.draw_landmarks(
+                                self._mp_drawing.draw_landmarks(
                                     image,
                                     hand_landmarks,
-                                    self.mp_hands.HAND_CONNECTIONS,
-                                    self.mp_drawing_styles.get_default_hand_landmarks_style(),
-                                    self.mp_drawing_styles.get_default_hand_connections_style())
+                                    self._mp_hands.HAND_CONNECTIONS,
+                                    self._mp_drawing_styles.get_default_hand_landmarks_style(),
+                                    self._mp_drawing_styles.get_default_hand_connections_style())
                     else:
                         self.now_ges='none'
                     if show_img:
@@ -103,7 +103,7 @@ class My_indentify():
                 break
         self.free()
     def free(self):
-        self.cap.release()
+        self._cap.release()
         cv2.destroyAllWindows()
 
     def start_in_thread(self):
