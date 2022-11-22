@@ -1,9 +1,17 @@
 import time
+import sys
+import os
 
-import keyboard
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    base_path = getattr(sys, '_MEIPASS', os.path.dirname(os.path.abspath(__file__)))
+    return os.path.join(base_path, relative_path)
 
-
-print(keyboard.read_hotkey())
+print(resource_path(r'assets\bind.yml'))
+# import keyboard
+#
+#
+# print(keyboard.read_hotkey())
 # keyboard.press('a+b+c')
 # import threading
 #

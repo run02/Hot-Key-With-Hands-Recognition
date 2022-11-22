@@ -8,11 +8,12 @@ import cv2
 import mediapipe as mp
 from threading import Thread
 try:
-    import tensorflow.python.keras as keras
-except:
-    import tensorflow.keras as keras
+    from  tensorflow.python.keras.models import load_model
+except ImportError:
+    from tensorflow.keras.models import load_model
+
 import numpy as np
-from GlobalStates import MyGlobalStates
+from GlobalStates import MyGlobalStates,resource_path
 
 '''
 提供手势识别的类
@@ -28,7 +29,7 @@ class My_indentify():
                          9: 'six', 10: 'three', 11: 'two'}
 
         print(self.ges_dict)
-        self.my_model = keras.models.load_model('assets/my_train_12_gestures2')  # 加载训练好的tensorflow模型
+        self.my_model = load_model(resource_path('assets/my_train_12_gestures2')) # 加载训练好的tensorflow模型
         self.mp_drawing = mp.solutions.drawing_utils  # 创建一个绘图工具
         self.mp_drawing_styles = mp.solutions.drawing_styles  # 创建一个绘图样式
         self.mp_hands = mp.solutions.hands  # 创建mediapipe框架读取特征点的初步工具，需要输入一个视频流，后通过自定义的tenslrflow神经网络获得手势预测值

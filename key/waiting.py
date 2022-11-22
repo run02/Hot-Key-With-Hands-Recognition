@@ -3,8 +3,8 @@ import keyboard
 import yaml #读配置文件的
 import time
 from threading import Thread
-from GlobalStates import MyGlobalStates
-def load(file="assets/bind.yml")->dict:
+from GlobalStates import MyGlobalStates,resource_path
+def load(file=resource_path("assets/bind.yml"))->dict:
     with open(file, 'r', encoding='utf-8') as f:
         binds = yaml.load(f.read(), Loader=yaml.FullLoader)
         f.close()

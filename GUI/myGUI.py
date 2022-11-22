@@ -7,14 +7,14 @@
 从其它文件中加载
 关闭程序
 '''
-from threading import Thread
+# from threading import Thread
 from PyQt5 import QtGui
 from key.waiting import binds,reloads
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QFormLayout, QLabel,QPushButton,QHBoxLayout,QLineEdit
 from PyQt5.QtWidgets import QMessageBox
-from GlobalStates import MyGlobalStates
-import keyboard
+from GlobalStates import MyGlobalStates,resource_path
+# import keyboard
 from recognition.recognition import recognizer
 from key.waiting import start_in_thread
 
@@ -183,7 +183,7 @@ class Winform(QWidget):
         binds[list(binds.keys())[idx]]=self.edits[idx].text()
 
     def save_binds_and_reload(self):
-        with open('assets/bind.yml','w',encoding='utf-8') as f:
+        with open(resource_path('assets/bind.yml'),'w',encoding='utf-8') as f:
             f.write("#所有能识别出来的手势: {0: 'cool', 1: 'eight', 2: 'fist', 3: 'five', 4: 'four', 5: 'fuck', 6: 'nine', 7: 'one', 8: 'seven', 9: 'six', 10: 'three', 11: 'two'}\n")
             #保存配置
             for k in binds.keys():
