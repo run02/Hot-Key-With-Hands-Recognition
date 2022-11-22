@@ -27,7 +27,7 @@ def waiting_to_press_and_release():
             if recognizer.now_ges in binds.keys():
                 if binds[recognizer.now_ges]!='nothing':
                     keyboard.press_and_release(binds[recognizer.now_ges])
-            time.sleep(0.2)
+            time.sleep(0.35)
         else:
             break
 
