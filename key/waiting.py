@@ -20,15 +20,24 @@ def reloads():
     global binds
     binds=load()
 
+# _buffer=['none','none']
+# def push_buffer(new:str):
+#     _buffer[0]=_buffer[1]
+#     _buffer[1]=new
+#
+# def buffer_diff()->bool:
+#     return _buffer[0]==_buffer[1]
+
 
 def waiting_to_press_and_release():
     global binds
     while True:
         if MyGlobalStates.__run__:
             if recognizer.now_ges in binds.keys():
-                if binds[recognizer.now_ges]!='nothing':
+                # push_buffer(recognizer.now_ges)
+                if binds[recognizer.now_ges]!='nothing' :
                     keyboard.press_and_release(binds[recognizer.now_ges])
-            time.sleep(0.2)
+            time.sleep(0.35)
         else:
             break
 

@@ -9,6 +9,8 @@
 '''
 # from threading import Thread
 from PyQt5 import QtGui
+
+
 from key.waiting import binds,reloads
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QFormLayout, QLabel,QPushButton,QHBoxLayout,QLineEdit
@@ -17,7 +19,8 @@ from GlobalStates import MyGlobalStates,resource_path
 # import keyboard
 from recognition.recognition import recognizer
 from key.waiting import start_in_thread
-
+from qt_material import apply_stylesheet
+from PyQt5.QtGui import QIcon
 
 from PyQt5.QtCore import pyqtSignal,Qt
 
@@ -38,6 +41,7 @@ class Winform(QWidget):
 
     def set_UI(self):
         self.setWindowTitle("Hot-Key-With-Hands-Recognition-V0.1")
+        self.setWindowIcon(QIcon(resource_path(r'assets/1.ico')))
         # self.resize(400, 100)
         hlayout = QHBoxLayout()
         fromlayout = QFormLayout()
@@ -200,6 +204,7 @@ class Winform(QWidget):
 '''
 def start_gui():
     app = QApplication(sys.argv)
+    apply_stylesheet(app, theme='dark_teal.xml')
     form = Winform()
     form.show()
     sys.exit(app.exec_())
