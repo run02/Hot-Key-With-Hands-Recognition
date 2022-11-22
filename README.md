@@ -16,7 +16,7 @@
 
 根据提供的十一个快捷手势,您可以轻松实现自定义的功能.
 
-您可以在`release`中下载已经打包好的.`exe`文件,它可以在windows系统上直接运行(运行的速度取决于您CPU的性能).
+您可以在[releases](https://github.com/LiRunJi/Hot-Key-With-Hands-Recognition/releases)中下载已经打包好的.`exe`文件,它可以在windows系统上直接运行(运行的速度取决于您CPU的性能).
 
 目前提供中文和英文两个版本.
 
