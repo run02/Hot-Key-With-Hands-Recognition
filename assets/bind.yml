@@ -1,0 +1,7 @@
+#所有能识别出来的手势: {0: 'cool', 1: 'eight', 2: 'fist', 3: 'five', 4: 'four', 5: 'fuck', 6: 'nine', 7: 'one', 8: 'seven', 9: 'six', 10: 'three', 11: 'two'}
+one: s
+nine: s
+five: x
+six: z
+eight: w
+three: space
