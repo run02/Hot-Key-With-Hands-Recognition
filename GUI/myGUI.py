@@ -136,34 +136,21 @@ class Winform(QWidget):
         self.btn_start.clicked.connect(self.btn_start_callback)#这里差了一个回调函数
         self.btn_end.clicked.connect(self.btn_end_callback)
 
+        # It seems that this should work, however the `i` puts into the function is always 11
         # for i in range(len(self.edits)):
-            # self.edits[i].clicked.connect(lambda: self.show_edits_change(i))
-            # eval(f"self.edits[{i}].clicked.connect(lambda :self.show_edits_change({i}))")
-        # self.edits[0].clicked.connect(lambda: self.show_edits_change(0))
-        # self.edits[1].clicked.connect(lambda: self.show_edits_change(1))
-        # self.edits[2].clicked.connect(lambda: self.show_edits_change(2))
-        # self.edits[3].clicked.connect(lambda: self.show_edits_change(3))
-        # self.edits[4].clicked.connect(lambda: self.show_edits_change(4))
-        # self.edits[5].clicked.connect(lambda: self.show_edits_change(5))
-        # self.edits[6].clicked.connect(lambda: self.show_edits_change(6))
-        # self.edits[7].clicked.connect(lambda: self.show_edits_change(7))
-        # self.edits[8].clicked.connect(lambda: self.show_edits_change(8))
-        # self.edits[9].clicked.connect(lambda: self.show_edits_change(9))
-        # self.edits[10].clicked.connect(lambda: self.show_edits_change(10))
-        # self.edits[11].clicked.connect(lambda: self.show_edits_change(11))
-        #
-        self.edits[0].textChanged.connect(lambda: self.show_edits_change(0))
-        self.edits[1].textChanged.connect(lambda: self.show_edits_change(1))
-        self.edits[2].textChanged.connect(lambda: self.show_edits_change(2))
-        self.edits[3].textChanged.connect(lambda: self.show_edits_change(3))
-        self.edits[4].textChanged.connect(lambda: self.show_edits_change(4))
-        self.edits[5].textChanged.connect(lambda: self.show_edits_change(5))
-        self.edits[6].textChanged.connect(lambda: self.show_edits_change(6))
-        self.edits[7].textChanged.connect(lambda: self.show_edits_change(7))
-        self.edits[8].textChanged.connect(lambda: self.show_edits_change(8))
-        self.edits[9].textChanged.connect(lambda: self.show_edits_change(9))
-        self.edits[10].textChanged.connect(lambda: self.show_edits_change(10))
-        self.edits[11].textChanged.connect(lambda: self.show_edits_change(11))
+        #     self.edits[i].clicked.connect(lambda: self.edits_change_callback(i))
+        self.edits[0].textChanged.connect(lambda: self.edits_change_callback(0))
+        self.edits[1].textChanged.connect(lambda: self.edits_change_callback(1))
+        self.edits[2].textChanged.connect(lambda: self.edits_change_callback(2))
+        self.edits[3].textChanged.connect(lambda: self.edits_change_callback(3))
+        self.edits[4].textChanged.connect(lambda: self.edits_change_callback(4))
+        self.edits[5].textChanged.connect(lambda: self.edits_change_callback(5))
+        self.edits[6].textChanged.connect(lambda: self.edits_change_callback(6))
+        self.edits[7].textChanged.connect(lambda: self.edits_change_callback(7))
+        self.edits[8].textChanged.connect(lambda: self.edits_change_callback(8))
+        self.edits[9].textChanged.connect(lambda: self.edits_change_callback(9))
+        self.edits[10].textChanged.connect(lambda: self.edits_change_callback(10))
+        self.edits[11].textChanged.connect(lambda: self.edits_change_callback(11))
 
         for btn in self.click_btns:
             btn.clicked.connect(self.save_binds_and_reload)
@@ -182,7 +169,7 @@ class Winform(QWidget):
         self.state.setText('关闭')
         MyGlobalStates.__run__=False
 
-    def show_edits_change(self,idx):
+    def edits_change_callback(self, idx):
         binds[list(binds.keys())[idx]]=self.edits[idx].text()
 
     def save_binds_and_reload(self):
