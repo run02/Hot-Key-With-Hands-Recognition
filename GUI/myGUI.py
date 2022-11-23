@@ -7,14 +7,14 @@
 从其它文件中加载
 关闭程序
 '''
-# from threading import Thread
+
 from PyQt5 import QtGui
 from key.waiting import binds,reloads
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QFormLayout, QLabel,QPushButton,QHBoxLayout,QLineEdit
 from PyQt5.QtWidgets import QMessageBox
 from GlobalStates import MyGlobalStates,resource_path
-# import keyboard
+
 from recognition.recognition import recognizer
 from key.waiting import start_in_thread
 
@@ -29,9 +29,7 @@ class MyLineEdit(QLineEdit):
         if QMouseEvent.button()==Qt.LeftButton:
             self.clicked.emit()
 
-# self.ges_dict = {0: 'cool', 1: 'eight', 2: 'fist', 3: 'five',
-#                  4: 'four', 5: 'fuck', 6: 'nine', 7: 'one', 8: 'seven',
-#                  9: 'six', 10: 'three', 11: 'two'
+
 class Winform(QWidget):
     def __init__(self, parent=None):
         super(Winform, self).__init__(parent)
@@ -112,8 +110,7 @@ class Winform(QWidget):
         self.edits.append(_fuck)
         self.edits.append(_cool)
 
-        # for e in self.edits:
-        #     e.setFocusProxy(Qt.NoFocus)
+
 
         for i in range(len(binds.keys())):
             vlayout = QHBoxLayout()
@@ -121,8 +118,7 @@ class Winform(QWidget):
             btn=QPushButton('修改')
 
             self.click_btns.append(btn)
-            # PATH = QLineEdit(self.edits[i])
-            # PATH.setFocusPolicy(Qt.NoFocus)  # 设置不可编辑
+
 
             vlayout.addWidget(self.labels[i])
             vlayout.addWidget(self.edits[i])

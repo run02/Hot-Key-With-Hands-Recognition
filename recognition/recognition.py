@@ -1,9 +1,3 @@
-'''
-运行该程序进行手势识别,
-摄像头可以来自于本地摄像头,也可以来自于udp视频透传
-手术识别完成后可根据识别出的手势发送控制
-最好作为主线程运行
-'''
 import cv2
 import mediapipe as mp
 from threading import Thread
