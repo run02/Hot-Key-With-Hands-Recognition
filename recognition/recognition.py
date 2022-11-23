@@ -1,67 +1,56 @@
-'''
-运行该程序进行手势识别,
-摄像头可以来自于本地摄像头,也可以来自于udp视频透传
-手术识别完成后可根据识别出的手势发送控制
-最好作为主线程运行
-'''
 import cv2
 import mediapipe as mp
 from threading import Thread
+
 try:
-    from  tensorflow.python.keras.models import load_model
+    from tensorflow.python.keras.models import load_model
 except ImportError:
     from tensorflow.keras.models import load_model
 
 import numpy as np
-from GlobalStates import MyGlobalStates,resource_path
+from GlobalStates import MyGlobalStates, resource_path
 
 '''
-提供手势识别的类
-访问 .now_ges 获得现阶段的手势名称
+After calling the start_in_thread method,
+Refresh the `now_ges` variable according to the recognition result,
+External programs can get the current gesture by reading `now_ges` variable
 '''
+
 
 class My_indentify():
     def __init__(self):
-        # self.ges_dict = np.load('assets/num_to_ss.npy', allow_pickle=True) #识别出来的手势是数字,需要用字典把序号转化成字符串,加载保存的对照表
-        # self.ges_dict = self.ges_dict.tolist()
         self._ges_dict = {0: 'cool', 1: 'eight', 2: 'fist', 3: 'five',
                           4: 'four', 5: 'fuck', 6: 'nine', 7: 'one', 8: 'seven',
                           9: 'six', 10: 'three', 11: 'two'}
 
-        print(self._ges_dict)
-        self._my_model = load_model(resource_path('assets/my_train_12_gestures2')) # 加载训练好的tensorflow模型
-        self._mp_drawing = mp.solutions.drawing_utils  # 创建一个绘图工具
-        self._mp_drawing_styles = mp.solutions.drawing_styles  # 创建一个绘图样式
-        self._mp_hands = mp.solutions.hands  # 创建mediapipe框架读取特征点的初步工具，需要输入一个视频流，后通过自定义的tenslrflow神经网络获得手势预测值
-        self._hands = self._mp_hands.Hands(model_complexity=0, min_detection_confidence=0.8, min_tracking_confidence=0.8)
-        self.now_ges = 'none' #用于共享出去,给其他程序获得手势的标志位
-        self._pre = []  # tensorflow模型预测输出为一个包含12个权值的list
+        self._my_model = load_model(resource_path('assets/my_train_12_gestures2'))
+        self._mp_drawing = mp.solutions.drawing_utils
+        self._mp_drawing_styles = mp.solutions.drawing_styles
+        self._mp_hands = mp.solutions.hands
+        self._hands = self._mp_hands.Hands(model_complexity=0, min_detection_confidence=0.8,
+                                           min_tracking_confidence=0.8)
+        self.now_ges = 'none'  # shared with external programs
+        self._pre = []
 
-
-
-    def start_in_loop(self,show_img=True):
-        self._cap=cv2.VideoCapture(0)
+    def start_in_loop(self, show_img=True):
+        self._cap = cv2.VideoCapture(0)
         while True:
             if MyGlobalStates.__run__ is True:
-                # time.sleep(0.05)
-                # 从摄像头读一帧画面
+
                 success, image = self._cap.read()
                 if success:
                     image = cv2.flip(image, 1)
-                    # 将图片设置为不可写，提升性能
+
                     image.flags.writeable = False
-                    # 转换为RGB格式
+
                     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-                    # 调用mediapipe框架读取特征点，特征点为1个对象，保存在results中
+
                     results = self._hands.process(image)
-                    # 打开图像可写的开关，将颜色由RGB转化成BGR,加速
                     image.flags.writeable = True
-                    image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
-                    # 获取手势预测值
-                    # 遍历results变量中的结果，将结果转化为nmupy数组格式输入神经网络进行预测
+                    if show_img:
+                        image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
 
                     if results.multi_hand_landmarks:
-                        # print(len(results.multi_hand_landmarks))
                         for hand_landmarks in results.multi_hand_landmarks:
                             landmark21 = []
                             for i in range(21):
@@ -70,14 +59,13 @@ class My_indentify():
                                 z = hand_landmarks.landmark[i].z
                                 landmark21.append((x, y, z))
                             landmark21_ = np.array([landmark21])
-                            # 输入神经网络进行预测，得到预测结果为每一种手势对应的概率
+                            # Prediction by self-trained neural network
                             pre = self._my_model.predict(landmark21_[:1])
-                            # 预测结果大于0.5认为结果可信，进入下一步判断，可更改该值获得更高或较低的可信度
+                            # Prediction probability > 0.5 is considered reliable
                             if np.max(pre) > 0.5:
-                                # 得到预测结概率最大的手势的编号
                                 ges_pre_p = np.argmax(pre)
-                                # 将手势编号通过字典转化为我们给他起名的字符串
                                 self.now_ges = self._ges_dict[ges_pre_p]
+
                         # 显示我们预测的手势与概率
                         if show_img:
                             cv2.putText(image, str(np.max(pre)), (100, 200), 0, 1.3, (0, 0, 255), 3)
@@ -91,7 +79,7 @@ class My_indentify():
                                     self._mp_drawing_styles.get_default_hand_landmarks_style(),
                                     self._mp_drawing_styles.get_default_hand_connections_style())
                     else:
-                        self.now_ges='none'
+                        self.now_ges = 'none'
                     if show_img:
                         cv2.namedWindow('Gesture Recognition Client', cv2.WINDOW_NORMAL)
                         # 展示图片画面
@@ -102,14 +90,14 @@ class My_indentify():
             else:
                 break
         self.free()
+
     def free(self):
         self._cap.release()
         cv2.destroyAllWindows()
 
     def start_in_thread(self):
-        Thread(target=self.start_in_loop).start()#,name='recognizer')
+        Thread(target=self.start_in_loop).start()  # ,name='recognizer')
 
 
-recognizer=My_indentify()
+recognizer = My_indentify()
 # recognizer.start_in_thread()
-
