@@ -12,15 +12,19 @@ This is an app that binds shortcut keys based on gesture recognition.
 
 It can recognize your gestures, and then trigger the corresponding shortcut keys according to the recognized gestures to realize customized functions.
 
-For example [Browse Tik Tok](https://www.douyin.com/user/MS4wLjABAAAAy5YUmt3PiQaZEP4GWYRROU2e-SrIzUv0yAqIiZxfbHw?modal_id=7168877845723352357):
+For example [Browse Tik Tok](https://www.bilibili.com/video/BV1RM411r7X6/?spm_id_from=333.999.0.0&vd_source=fe4bd01140337dd117de33d4ec86ee6c):
 
-[You can click this link to view the demo effect of the program.](https://www.douyin.com/user/MS4wLjABAAAAy5YUmt3PiQaZEP4GWYRROU2e-SrIzUv0yAqIiZxfbHw?modal_id=7168877845723352357)
+[You can click this link to view the demo effect of the program.](https://www.bilibili.com/video/BV1RM411r7X6/?spm_id_from=333.999.0.0&vd_source=fe4bd01140337dd117de33d4ec86ee6c)
 
 According to the eleven shortcut gestures provided, you can easily implement customized functions.
 
 You can download the packaged .`exe` file in [releases](https://github.com/LiRunJi/Hot-Key-With-Hands-Recognition/releases), which can be run directly on the windows system ( The speed of operation depends on the performance of your CPU).
 
 There are currently two versions in Chinese and English.
+
+
+
+About the training of the model, you can enter the [training branch](https://github.com/LiRunJi/Hot-Key-With-Hands-Recognition/tree/training) to view. Maybe In the future this branch will fork into main branch.
 
 
 
@@ -152,13 +156,17 @@ Many thanks to the following institutions or authors, without whom this project 
 
 [Qt-Material — Qt Material documentation](https://qt-material.readthedocs.io/en/latest/index.html)
 
+[PyInstaller Manual — PyInstaller 5.6.2 documentation](https://pyinstaller.org/en/stable/)
+
+[auto-py-to-exe · PyPI](https://pypi.org/project/auto-py-to-exe/)
+
 [Google Translate](https://translate.google.com)
 
 
 
 I also thank my mentor. I used to be a person who could hardly write code. He encouraged me when I was confused and confused. It was this support that made me go on the road of programming and solve problems step by step. Coding ability. Although my level of writing code is average now, for me, this is already a huge breakthrough. From a person who can't even learn C language, to now I can freely realize what I want. It's simply unimaginable.
 
-There are also many blog authors who can search for solutions when encountering bugs.
+There are also many thanks to blog  authors that can search for solutions when encountering bugs.
 
 
 
