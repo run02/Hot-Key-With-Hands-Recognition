@@ -3,7 +3,9 @@ try:
 except:
    import tensorflow.keras as keras
 from keras.layers import Conv1D, BatchNormalization, Activation, Dropout, Flatten, Dense,AveragePooling1D
-
+import numpy as np
+from GlobalStates import resource_path
+all_gestures=np.load(resource_path('DataForTraining/all_gestures.npy'),allow_pickle=True).tolist()
 
 #一个普通的卷积神经网络
 class MyModel(keras.Model):
@@ -19,7 +21,7 @@ class MyModel(keras.Model):
     self.d2 = Dropout(0.2)
     self.f2=Dense(128,activation='relu')
     self.d3=Dropout(0.2)
-    self.f3 = Dense(13, activation='softmax')
+    self.f3 = Dense(len(all_gestures), activation='softmax')
 
   def call(self, x):
     x = self.c1(x)

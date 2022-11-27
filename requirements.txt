@@ -1,9 +1,6 @@
 pyinstaller
 auto-py-to-exe
-pyflowchart
 numpy
 mediapipe
 tensorflow
-keyboard
-pyyaml
 PyQt5
