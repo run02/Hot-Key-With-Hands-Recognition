@@ -7,7 +7,7 @@ import numpy as np
 from GlobalStates import resource_path
 all_gestures=np.load(resource_path('DataForTraining/all_gestures.npy'),allow_pickle=True).tolist()
 
-#一个普通的卷积神经网络
+
 class MyModel(keras.Model):
   def __init__(self):
     super(MyModel, self).__init__()
