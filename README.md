@@ -12,9 +12,9 @@ This is an app that binds shortcut keys based on gesture recognition.
 
 It can recognize your gestures, and then trigger the corresponding shortcut keys according to the recognized gestures to realize customized functions.
 
-For example [Browse Tik Tok](https://www.bilibili.com/video/BV1RM411r7X6/?spm_id_from=333.999.0.0&vd_source=fe4bd01140337dd117de33d4ec86ee6c):
+For example [Browse Tik Tok](https://www.youtube.com/watch?v=vOSos8CcdtQ):
 
-[You can click this link to view the demo effect of the program.](https://www.bilibili.com/video/BV1RM411r7X6/?spm_id_from=333.999.0.0&vd_source=fe4bd01140337dd117de33d4ec86ee6c)
+[You can click this link to view the demo effect of the program.](https://www.youtube.com/watch?v=vOSos8CcdtQ)
 
 According to the eleven shortcut gestures provided, you can easily implement customized functions.
 
