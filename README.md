@@ -8,23 +8,21 @@ Controlling objects in the air has always been a fantasy thing, using this softw
 
 ## Introduction
 
-This is an app that binds shortcut keys based on gesture recognition.
+This app binds shortcut keys based on gesture recognition.
 
-It can recognize your gestures, and then trigger the corresponding shortcut keys according to the recognized gestures to realize customized functions.
+It can recognise your gestures and then trigger the corresponding shortcut keys according to the recognised gestures to realise customised functions.
 
-For example [Browse Tik Tok](https://www.youtube.com/watch?v=vOSos8CcdtQ):
+For example, [Browse Tik Tok](https://www.youtube.com/watch?v=vOSos8CcdtQ):
 
 [You can click this link to view the demo effect of the program.](https://www.youtube.com/watch?v=vOSos8CcdtQ)
 
-According to the eleven shortcut gestures provided, you can easily implement customized functions.
+You can quickly implement customised functions according to the eleven shortcut gestures provided.
 
-You can download the packaged .`exe` file in [releases](https://github.com/LiRunJi/Hot-Key-With-Hands-Recognition/releases), which can be run directly on the windows system ( The speed of operation depends on the performance of your CPU).
+You can download the packaged .exe file in [releases](https://github.com/LiRunJi/Hot-Key-With-Hands-Recognition/releases), which can run directly on the windows system ( The operation speed depends on your CPU's performance).
 
 There are currently two versions in Chinese and English.
 
-
-
-About the training of the model, you can enter the [training branch](https://github.com/LiRunJi/Hot-Key-With-Hands-Recognition/tree/training) to view. Maybe In the future this branch will fork into main branch.
+About the training of the model, you can enter the [training branch](https://github.com/LiRunJi/Hot-Key-With-Hands-Recognition/tree/training) to view it. Maybe In the future this branch will fork into main branch.
 
 
 
