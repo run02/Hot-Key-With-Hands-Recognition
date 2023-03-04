@@ -37,8 +37,6 @@ About the training of the model, you can enter the [training branch](https://git
 
 
 
-<img src="https://my-blogs-imgs-1312546167.cos.ap-nanjing.myqcloud.com//wps3.jpg" alt="img" style="zoom:50%;" /> 
-
 
 
 <img src="https://my-blogs-imgs-1312546167.cos.ap-nanjing.myqcloud.com//wps4.jpg" alt="img" style="zoom:50%;" /> 
