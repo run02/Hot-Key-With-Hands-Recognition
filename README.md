@@ -28,7 +28,7 @@ About the training of the model, you can enter the [training branch](https://git
 
 ### The gestures currently supported for recognition are as follows:
 
-<img src="https://my-blogs-imgs-1312546167.cos.ap-nanjing.myqcloud.com//wps1.jpg" alt="img" style="zoom:50%;" /> 
+
 
 
 
