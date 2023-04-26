@@ -1,5 +1,5 @@
 # Automatically train the model
-
+[中文](README-zh.md)
 ## Introduction to Project Structure
 
 ![image-20221128005932233](https://my-blogs-imgs-1312546167.cos.ap-nanjing.myqcloud.com//image-20221128005932233.png)
