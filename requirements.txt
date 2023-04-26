@@ -1,0 +1,8 @@
+pyinstaller
+auto-py-to-exe
+numpy
+mediapipe
+tensorflow
+keyboard
+pyyaml
+PyQt5
