@@ -1,0 +1,86 @@
+/*QLabel {*/
+/*    color: white;*/
+/*    font-size: 14px;*/
+/*}*/
+
+/*QCheckBox {*/
+/*    spacing: 5px;*/
+/*    color: white;*/
+/*}*/
+
+/*QCheckBox::indicator {*/
+/*    width: 20px;*/
+/*    height: 20px;*/
+/*}*/
+
+/*QCheckBox::indicator:checked {*/
+/*    image: url(:asssets/APPICO.ico);*/
+/*}*/
+
+/*QCheckBox::indicator:unchecked {*/
+/*    image: url(:/path/to/your/unchecked-image.png);*/
+/*}*/
+
+QPushButton {
+    background-color: #009688;
+    color: white;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+QPushButton:hover {
+    background-color: #00796b;
+}
+
+
+GestureControlUI QLabel#statusLabel {
+    font-weight: bold;
+    font-size: 14px;
+    color: #2e7d32;
+}
+
+GestureControlUI QLabel#gestureLabel {
+    font-weight: bold;
+    font-size: 14px;
+}
+/*GestureControlUI QCheckBox#cameraDisplayCheckbox {*/
+/*    *//* 在这里添加适用于 QCheckBox 的样式 */
+/*}*/
+GestureControlUI QCheckBox {
+    spacing: 5px;
+    color: #616161;
+}
+
+GestureControlUI QCheckBox::indicator {
+    width: 20px;
+    height: 20px;
+}
+
+GestureControlUI QCheckBox::indicator:unchecked {
+    border: 2px solid #9e9e9e;
+    background-color: #fafafa;
+}
+
+GestureControlUI QCheckBox::indicator:checked {
+    border: 2px solid #9e9e9e;
+    background-color: #64b5f6;
+}
+
+GestureControlUI QCheckBox::indicator:unchecked:hover {
+    border-color: #64b5f6;
+}
+
+GestureControlUI QCheckBox::indicator:checked:hover {
+    background-color: #2196f3;
+    border-color: #2196f3;
+}
+GestureControlUI QPushButton#startButton {
+    background-color: #2e7d32;
+    color: white;
+}
+
+GestureControlUI QPushButton#stopButton {
+    background-color: #2b4b76;
+    color: white;
+}
