@@ -50,8 +50,7 @@ You can also train your own gesture recognition model through the [training bran
 
 - Build from source code
 
-  ```
-  sh
+  ```sh
   # download and install environment
   git clone https://github.com/LiRunJi/Hot-Key-With-Hands-Recognition.git
   cd Hot-Key-With-Hands-Recognition
@@ -90,8 +89,7 @@ You can also train your own gesture recognition model through the [training bran
 
   Commit changes to the `assets/translations.yml` file.
 
-  ```
-  yaml
+  ```yaml
   supported_languages:
     - en
     - zh-CN
@@ -130,15 +128,13 @@ You can also train your own gesture recognition model through the [training bran
 
 2. Clone the forked repository locally using the following command:
 
-   ```
-   bash
+   ```bash
    git clone https://github.com/LiRunJi/Hot-Key-With-Hands-Recognition.git
    ```
 
 3. Create a new branch and start developing on it. You can use the following command:
 
-   ```
-   sh
+   ```sh
    git checkout -b your_feature_branch
    ```
 
@@ -146,8 +142,7 @@ You can also train your own gesture recognition model through the [training bran
 
 5. Commit the changes to the forked repository using the following command:
 
-   ```
-   sh
+   ```sh
    git add .
    git commit -m "Your commit message"
    git push origin your_feature_branch
@@ -166,7 +161,6 @@ You can also train your own gesture recognition model through the [training bran
   We recommend the following format for commit messages:
 
   ```
-  yaml
   Title 
   
   The purpose of the commit and the changes made
