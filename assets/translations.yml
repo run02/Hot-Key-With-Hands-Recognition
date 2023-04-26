@@ -1,0 +1,84 @@
+supported_languages:
+  - en
+  - zh-CN
+  - zh-TW
+
+translations:
+  Language:
+    en: Language
+    zh-CN: 语言
+    zh-TW: 語言
+
+  Start:
+    en: Start
+    zh-CN: 开始
+    zh-TW: 開始
+
+  Stop:
+    en: Stop
+    zh-CN: 停止
+    zh-TW: 停止
+
+  Settings:
+    en: Settings
+    zh-CN: 设置
+    zh-TW: 設置
+
+  File:
+    en: File
+    zh-CN: 文件
+    zh-TW: 文件
+
+  Edit:
+    en: Edit
+    zh-CN: 编辑
+    zh-TW: 編輯
+
+  View:
+    en: View
+    zh-CN: 查看
+    zh-TW: 查看
+
+  Help:
+    en: Help
+    zh-CN: 帮助
+    zh-TW: 幫助
+  NotStarted:
+    en: Not started
+    zh-CN: 未开启
+    zh-TW: 未開啟
+  CurrentGesture:
+    en: Current gesture
+    zh-CN: 当前手势
+    zh-TW: 當前手勢
+  ShowCamera:
+    en: Show camera display
+    zh-CN: 显示摄像头画面
+    zh-TW: 顯示攝像頭畫面
+  Return:
+    en: Return
+    zh-CN: 返回
+    zh-TW: 返回
+  Modify:
+    en: Modify
+    zh-CN: 修改
+    zh-TW: 修改
+  Current_Gesture_None:
+    en: 'Current Gesture: None'
+    zh-CN: '当前手势: 无'
+    zh-TW: '當前手勢: 無'
+  Current_Gesture:
+    en:
+      Current Gesture
+    zh-CN:
+      当前手势
+    zh-TW:
+      當前手勢
+  Modify Confirm:
+    en: Modify Confirm
+    zh-CN: 修改确认
+    zh-TW: 修改確認
+  Shortcuts Modified!:
+    en: Shortcuts Modified!
+    zh-CN: 快捷键修改成功
+    zh-TW: 快捷鍵修改成功
