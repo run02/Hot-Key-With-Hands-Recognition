@@ -47,12 +47,6 @@ At present, this is a draft version that can be used but needs to be improved. L
 
 
 
-## By the way 
-
-The author is still a rookie in writing this project, and is currently preparing for the final exam and IELTS exam(It is so hard!). With my vocabulary, many sentences in the document cannot be expressed in English at all. Thanks to Google Translate, this project can have so many English words(Even these are mostly translated by Google Translate ) . During this period, some sentences may be confusing to read, which is probably because machine translation is not suitable for daily use in the past.
-You are very welcome to point out the problems in the project or share the code for the project, I have a 50% probability that I can handle it well.
-
-
 
 
 
