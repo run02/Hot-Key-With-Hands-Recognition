@@ -20,25 +20,25 @@
 
 ### 主界面:
 
-![image-20230426133300685](readme_assets/image-20230426133300685.png)
+![image-20230426133300685](readme_assets/mainWindow.png)
 
 ### 选择语言:
 
-![image-20230426140032428](readme_assets/image-20230426140032428.png)
+![image-20230426140032428](readme_assets/langueSetting.png)
 
-![image-20230426135831114](readme_assets/image-20230426135831114.png)
+![image-20230426133335028](readme_assets/cn.png)
 
 ### 设置手势对应的快捷键:
 
-![image-20230426133335028](readme_assets/image-20230426133335028.png)
+![image-20230426133345015](readme_assets/setting_key.png)
 
 ### 保存:
 
-![image-20230426133345015](readme_assets/image-20230426133345015.png)
+![image-20230426135831114](readme_assets/modified.png)
 
 ### 当前模型可能能识别出的手势
 
- ![eight.ico](assets\gestures_icons\eight.ico)  ![cool.ico](assets\gestures_icons\cool.ico)  ![fist.ico](assets\gestures_icons\fist.ico)  ![five.ico](assets\gestures_icons\five.ico)  ![four.ico](assets\gestures_icons\four.ico)  ![fuck.ico](assets\gestures_icons\fuck.ico)  ![nine.ico](assets\gestures_icons\nine.ico) ![one.ico](assets\gestures_icons\one.ico)  ![seven.ico](assets\gestures_icons\seven.ico)  ![six.ico](assets\gestures_icons\six.ico)  ![three.ico](assets\gestures_icons\three.ico)  ![two.ico](assets\gestures_icons\two.ico) 
+![image-20230427003059769](readme_assets/image-20230427003059769.png)
 
  
 
@@ -155,29 +155,21 @@ git push origin your_feature_branch
 
 - UI界面优化
 
-  ![image-20230426133300685](readme_assets/image-20230426133300685.png)
+  ![image-20230426133300685](readme_assets/mainWindow.png)
 
-  ![image-20230426140032428](readme_assets/image-20230426140032428.png)
+  ![image-20230426140032428](readme_assets/langueSetting.png)
 
+  ![image-20230426133335028](readme_assets/cn.png)
   
-
-![image-20230426133335028](readme_assets/image-20230426133335028.png)
-
-
-
-![image-20230426133345015](readme_assets/image-20230426133345015.png)
-
-
-
-![image-20230426135831114](readme_assets/image-20230426135831114.png)
-
-
-
-### V0.1.0
-
-![img](readme_assets/68747470733a2f2f6d792d626c6f67732d696d67732d313331323534363136372e636f732e61702d6e616e6a696e672e6d7971636c6f75642e636f6d2f2f696d6167652d32303232313132333032313031313537332e706e67.png)
-
-<img src="readme_assets/68747470733a2f2f6d792d626c6f67732d696d67732d313331323534363136372e636f732e61702d6e616e6a696e672e6d7971636c6f75642e636f6d2f2f696d6167652d32303232313132333030353632323739312e706e67.png" alt="img" style="zoom: 67%;" />
+  ![image-20230426133345015](readme_assets/setting_key.png)
+  
+  ![image-20230426135831114](readme_assets/modified.png)
+  
+  ### V0.1.0
+  
+  ![img](readme_assets/v01-en.png)
+  
+  <img src="readme_assets/v01zh.png" alt="img" style="zoom: 67%;" />
 
 ## 下一个版本的更新预告
 
