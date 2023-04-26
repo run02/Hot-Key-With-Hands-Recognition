@@ -69,24 +69,68 @@
 
 
 
-## 关于贡献代码
+## 参与贡献
 
-非常乐意看到您对这个仓库感兴趣并且愿意为之贡献代码.  非常欢迎您来贡献代码, 包括但不限于以下部分:
+很高兴看到您对此项目感兴趣并愿意为其贡献代码。可贡献的地方包括但不限于以下内容：
 
 ### 可贡献的内容
 
 - 贡献手势识别模型
 
-- 贡献手势训练的脚本
-- 贡献软件架构与抽象
+  在 saved_ai_model 或 saved_ai_lite_model 中提交更改
+
+- 贡献手势训练脚本
+
+  在 training 分支上提交更改
+
+- 贡献软件架构和抽象
+
+  在 abstract_layer.py 中提交更改
 
 - 贡献用户界面
 
+  在 assets/styles 中提交更改
+
 - 贡献图标
+
+  在 assets/gestures_icons 或任何其他地方提交更改
+
 - 贡献翻译
+
+  在 assets/translations.yml 中提交更改
+
+  ```yaml
+  supported_languages:
+    - en
+    - zh-CN
+    - zh-TW
+  #在此处添加新支持的语言，例如 -JP
+  
+  translations:
+    Language:
+      en: Language
+      zh-CN: 语言
+      zh-TW: 語言
+  #然后翻译键并添加新键和值，例如 JP: 言語
+  
+    Start:
+      en: Start
+      zh-CN: 开始
+      zh-TW: 開始
+  
+    Stop:
+      en: Stop
+      zh-CN: 停止
+      zh-TW: 停止
+  ```
+
 - 贡献演示视频
 
-- 贡献其它内容
+  在 README_DEMO_VIDEOS.md 中提交更改
+
+- 贡献其他内容
+
+  在任何您喜欢的地方都可以提交更改
 
 ### 步骤
 
