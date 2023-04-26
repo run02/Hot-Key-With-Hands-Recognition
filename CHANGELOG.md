@@ -42,7 +42,7 @@ All notable changes to the "Hot-Key-With-Hands-Recognition" project will be docu
 
 #### [0.1.0]
 
-![img](readme_assets/v01-en-1682543424143-5.png)
+![img](readme_assets/v01-en.png)
 
 <img src="readme_assets/v01zh.png" alt="img" style="zoom: 67%;" />
 
