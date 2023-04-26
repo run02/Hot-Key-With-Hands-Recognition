@@ -30,15 +30,15 @@ All notable changes to the "Hot-Key-With-Hands-Recognition" project will be docu
 
 #### [0.2.0]
 
-![image-20230426133300685](readme_assets/mainWindow-1682543424142-1.png)
+![image-20230426133300685](readme_assets/mainWindow.png)
 
-![image-20230426140032428](readme_assets/langueSetting-1682543424142-2.png)
+![image-20230426140032428](readme_assets/langueSetting.png)
 
-![image-20230426133335028](readme_assets/cn-1682543424142-3.png)
+![image-20230426133335028](readme_assets/cn.png)
 
-![image-20230426133345015](readme_assets/setting_key-1682543424142-4.png)
+![image-20230426133345015](readme_assets/setting_key.png)
 
-![image-20230426135831114](readme_assets/modified-1682543424143-6.png)
+![image-20230426135831114](readme_assets/modified.png)
 
 #### [0.1.0]
 
