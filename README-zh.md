@@ -181,39 +181,7 @@ git push origin your_feature_branch
   Date: 提交日期
   ```
 
-## 版本更新记录
-
-### V0.2.0
-
-- 架构升级, 采用分层设计
-
-- 增加了多语言的支持, 目前支持简体中文,繁体中文,英语
-
-  由于Qt自带的翻译需要下载太多内容比较麻烦, 这里单独实现了一个支持多语言轻量级的翻译方式
-
-- 快捷键绑定设置优化, 由手动输入变成点击后自动捕获按下的快捷键
-
-- 快捷键绑定界面优化, 用改用图片代替文字展示手势
-
-- 增加了是否展示摄像头的选项
-
-- UI界面优化
-
-  ![image-20230426133300685](readme_assets/mainWindow.png)
-
-  ![image-20230426140032428](readme_assets/langueSetting.png)
-
-  ![image-20230426133335028](readme_assets/cn.png)
-  
-  ![image-20230426133345015](readme_assets/setting_key.png)
-  
-  ![image-20230426135831114](readme_assets/modified.png)
-  
-  ### V0.1.0
-  
-  ![img](readme_assets/v01-en.png)
-  
-  <img src="readme_assets/v01zh.png" alt="img" style="zoom: 67%;" />
+## [版本更新记录](CHANGELOG.md)
 
 ## 下一个版本的更新预告
 
