@@ -170,39 +170,7 @@ You can also train your own gesture recognition model through the [training bran
   Date: 0000-00-00
   ```
 
-## Version History
-
-### V0.2.0
-
-- Architecture upgrade, adopting layered design
-
-- Added multi-language support, currently supporting Simplified Chinese, Traditional Chinese, and English
-
-  Due to the Qt's built-in translation requiring the download of too much content, which is more troublesome, a lightweight translation method that supports multiple languages is implemented separately here.
-
-- Optimized the shortcut binding setting, from manual input to automatic capture of the pressed shortcut after clicking
-
-- Optimized the shortcut binding interface, using pictures instead of text to display gestures
-
-- Added an option to show or hide the camera
-
-- UI interface optimization
-
-  ![image-20230426133300685](readme_assets/mainWindow.png)
-
-  ![image-20230426140032428](readme_assets/langueSetting.png)
-
-![image-20230426133335028](readme_assets/cn.png)
-
-![image-20230426133345015](readme_assets/setting_key.png)
-
-![image-20230426135831114](readme_assets/modified.png)
-
-### V0.1.0
-
-![img](readme_assets/v01-en.png)
-
-<img src="readme_assets/v01zh.png" alt="img" style="zoom: 67%;" />
+## [Version History](CHANGELOG.md)
 
 ## Next Version Preview
 
