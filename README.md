@@ -63,59 +63,107 @@ You can also train your own gesture recognition model through the [training bran
 
 ![image-20230427010212580](readme_assets/image-20230427010212580.png)
 
-## Contributing to the Code
+### Contributable Content
 
-We are very happy to see that you are interested in this repository and are willing to contribute code to it. We welcome contributions, including but not limited to the following:
+- Gesture recognition models
 
-### Contributable content
+  Commit changes to the `saved_ai_model` or `saved_ai_lite_model` directories.
 
-- Contributing gesture recognition models
-- Contributing gesture training scripts
-- Contributing software architecture and abstraction
-- Contributing user interface
-- Contributing icons
-- Contributing translations
-- Contributing demo videos
-- Contributing other content
+- Gesture training scripts
+
+  Commit changes to the `training` branch.
+
+- Software architecture and abstraction
+
+  Commit changes to the `abstract_layer.py` file.
+
+- User interface
+
+  Commit changes to the `assets/styles` directory.
+
+- Icons
+
+  Commit changes to the `assets/gestures_icons` directory or any other directory.
+
+- Translations
+
+  Commit changes to the `assets/translations.yml` file.
+
+  ```
+  yamlCopy codesupported_languages:
+    - en
+    - zh-CN
+    - zh-TW
+  #add new supported language here such as -JP
+  
+  translations:
+    Language:
+      en: Language
+      zh-CN: 语言
+      zh-TW: 語言
+  #then trannslate the key and add new key and value such as JP: 言語
+  
+    Start:
+      en: Start
+      zh-CN: 开始
+      zh-TW: 開始
+  
+    Stop:
+      en: Stop
+      zh-CN: 停止
+      zh-TW: 停止
+  ```
+
+- Demo videos
+
+  Commit changes to the `README_DEMO_VIDEOS.md` file.
+
+- Other content
+
+  Commit changes to any other directory.
 
 ### Steps
 
 1. Fork this project on GitHub.
+
 2. Clone the forked repository locally using the following command:
 
-```
-git clone https://github.com/LiRunJi/Hot-Key-With-Hands-Recognition.git
-```
+   ```
+   bashCopy code
+   git clone https://github.com/LiRunJi/Hot-Key-With-Hands-Recognition.git
+   ```
 
-1. Create a new branch and start developing on it. You can use the following command:
+3. Create a new branch and start developing on it. You can use the following command:
 
-```
-git checkout -b your_feature_branch
-```
+   ```
+   cssCopy code
+   git checkout -b your_feature_branch
+   ```
 
-1. Test the changes locally and make sure the code quality is good. Ensure that your code meets the quality standards of the project, including coding style, variable naming conventions, and comment conventions, etc., as specified below.
-2. Commit the changes to the forked repository using the following command:
+4. Test the changes locally and make sure the code quality is good. Ensure that your code meets the quality standards of the project, including coding style, variable naming conventions, and comment conventions, etc., as specified below.
 
-```
-git add .
-git commit -m "Your commit message"
-git push origin your_feature_branch
-```
+5. Commit the changes to the forked repository using the following command:
 
-1. Create a pull request on GitHub. In the pull request, briefly describe the changes you made and provide relevant screenshots or examples.
+   ```
+   sqlCopy codegit add .
+   git commit -m "Your commit message"
+   git push origin your_feature_branch
+   ```
+
+6. Create a pull request on GitHub. In the pull request, briefly describe the changes you made and provide relevant screenshots or examples.
 
 ### Standards
 
-- Coding style: It is recommended to use [PEP 8](https://www.python.org/dev/peps/pep-0008/) as the coding style guide.
+- Coding style: We recommend following the [PEP 8](https://www.python.org/dev/peps/pep-0008/) coding style guide.
 
 - Variable and function specifications: Use standard and common English to name variables as much as possible. It is best to use a naming style similar to that of this repository.
 
 - Commit message specifications:
 
-  You can refer to the following format:
+  We recommend the following format for commit messages:
 
   ```
-  Title 
+  yamlCopy codeTitle 
   
   The purpose of the commit and the changes made
   
