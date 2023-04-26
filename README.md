@@ -12,7 +12,7 @@ This is an application that binds shortcuts based on gesture recognition. It can
 
 You can download the pre-packaged `.exe` file in [releases](https://github.com/LiRunJi/Hot-Key-With-Hands-Recognition/releases), or run it through the source code.
 
-You can also train your own gesture recognition model through the [training branch](https://github.com/LiRunJi/Hot-Key-With-Hands-Recognition/tree/training-zh) or build your own gesture recognition model by implementing the abstract interface.
+You can also train your own gesture recognition model through the [training branch](https://github.com/LiRunJi/Hot-Key-With-Hands-Recognition/tree/training) or build your own gesture recognition model by implementing the abstract interface.
 
 ## Software Interface and Usage
 
