@@ -61,7 +61,7 @@ You can also train your own gesture recognition model through the [training bran
 
 ## Project Structure
 
-![image-20230426164241983](readme_assets/image-20230426164241983.png)
+![image-20230427010212580](readme_assets/image-20230427010212580.png)
 
 ## Contributing to the Code
 
