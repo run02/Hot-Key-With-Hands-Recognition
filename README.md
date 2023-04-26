@@ -115,15 +115,13 @@ git push origin your_feature_branch
   You can refer to the following format:
 
   ```
-  English Title / 中文标题
+  Title 
   
   The purpose of the commit and the changes made
   
-  提交的目的和所做的更改
+  Author: your name 
   
-  Author: 作者名字
-  
-  Date: 提交日期
+  Date: 0000-00-00
   ```
 
 ## Version History
