@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This gesture recognition-based software enables you to effortlessly operate and browse various applications on your Windows computer without the need for a keyboard or mouse, such as effortlessly [swiping through TikTok]().Whether you're enjoying a meal, have messy hands, or are just a bit far from your computer, you can rely on gesture recognition to control the app and experience the convenience of touch-free navigation. The camera detects gestures, which then trigger corresponding shortcuts.
+This gesture recognition-based software enables you to effortlessly operate and browse various applications on your Windows computer without the need for a keyboard or mouse, such as [effortlessly swiping through TikTok](README_DEMO_VIDEOS.md).Whether you're enjoying a meal, have messy hands, or are just a bit far from your computer, you can rely on gesture recognition to control the app and experience the convenience of touch-free navigation. The camera detects gestures, which then trigger corresponding shortcuts.
 
 You can download the pre-packaged `.exe` file in [releases](https://github.com/LiRunJi/Hot-Key-With-Hands-Recognition/releases), or run it through the source code.
 
