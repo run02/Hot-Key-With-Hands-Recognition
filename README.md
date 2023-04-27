@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Version](https://img.shields.io/badge/version-0.2.0-brightgreen)](?model=text-davinci-002-render-sha) [![Multi-Language](https://img.shields.io/badge/multi--language-supported-blue)](?model=text-davinci-002-render-sha)
 
-:globe_with_meridians: **Supported Languages**: [English](README.md) |[中文](README-zh.md)
+:globe_with_meridians: **Supported Languages**: [English](README.md) | [中文](README-zh.md)
 
 ## Introduction
 
