@@ -2,11 +2,11 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)[![Version](https://img.shields.io/badge/version-0.2.0-brightgreen)]()[![Multi-Language](https://img.shields.io/badge/multi--language-supported-blue)]()
 
-:globe_with_meridians: [English](README.md) |[中文](README-zh.md)
+:globe_with_meridians: [English](README.md) | [中文](README-zh.md)
 
 ## 简介
 
-这款基于手势识别的软件让您能够在不使用键盘或鼠标的情况下，轻松操作和浏览Windows计算机上的各种应用, 例如[在Tiktok隔空滑动刷视频](). 无论您是在干饭吃零食，还是离电脑稍远, 或者是单纯的想体验一把隔空控物, 都可以使用这款软件，享受无需触摸的便捷体验, 摄像头识别到的手势就会触发提前设置的的快捷键, 以此实现"隔空控物"的功能.
+这款基于手势识别的软件让您能够在不使用键盘或鼠标的情况下，轻松操作和浏览Windows计算机上的各种应用, 例如[在Tiktok隔空滑动刷视频](README_DEMO_VIDEOS.md). 无论您是在干饭吃零食，还是离电脑稍远, 或者是单纯的想体验一把隔空控物, 都可以使用这款软件，享受无需触摸的便捷体验, 摄像头识别到的手势就会触发提前设置的的快捷键, 以此实现"隔空控物"的功能.
 
 ## 软件界面与使用方式
 
