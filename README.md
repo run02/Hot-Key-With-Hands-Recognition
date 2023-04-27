@@ -6,9 +6,7 @@
 
 ## Introduction
 
-This is an application that binds shortcuts based on gesture recognition. It can trigger specific shortcuts based on the gestures recognized by the camera. This feature can achieve a touchless control effect, such as swiping on Douyin without touching the phone:
-
-[You can click this link to see the demo of the program (this is an old version, a new version is being made)](https://www.youtube.com/watch?v=vOSos8CcdtQ)
+This gesture recognition-based software enables you to effortlessly operate and browse various applications on your Windows computer without the need for a keyboard or mouse, such as effortlessly [swiping through TikTok]().Whether you're enjoying a meal, have messy hands, or are just a bit far from your computer, you can rely on gesture recognition to control the app and experience the convenience of touch-free navigation. The camera detects gestures, which then trigger corresponding shortcuts.
 
 You can download the pre-packaged `.exe` file in [releases](https://github.com/LiRunJi/Hot-Key-With-Hands-Recognition/releases), or run it through the source code.
 
