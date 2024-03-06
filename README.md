@@ -1,3 +1,8 @@
+
+# Project Deprecation Notice
+Thank you for your interest and support for the "Hot Key With Hands Recognition" project. After careful consideration, I have decided to mark this project as deprecated. As technology advances, there are now more mature and feature-rich solutions available in the market that better meet your needs.
+
+Please note that this project will no longer receive updates or maintenance. I encourage everyone to explore other more advanced alternatives for a better experience and support. Thank you once again for your past support and understanding.
 # Gesture Recognition Shortcuts
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Version](https://img.shields.io/badge/version-0.2.0-brightgreen)](?model=text-davinci-002-render-sha) [![Multi-Language](https://img.shields.io/badge/multi--language-supported-blue)](?model=text-davinci-002-render-sha)
